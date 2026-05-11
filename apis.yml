@@ -1,0 +1,65 @@
+aid: zoho-desk
+name: Zoho Desk
+description: >-
+  Zoho Desk is a cloud-based customer support and help desk platform that helps
+  businesses manage tickets, contacts, accounts, knowledge base articles, and
+  community forums across multiple support channels. The Zoho Desk REST API
+  provides programmatic access to tickets, threads, contacts, agents,
+  departments, tasks, and knowledge base content using OAuth 2.0 authentication
+  scoped per organization.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Customer Support
+  - Help Desk
+  - Ticketing
+  - Knowledge Base
+  - Customer Service
+  - Zoho
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/zoho-desk/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: zoho-desk:zoho-desk-api
+    name: Zoho Desk REST API
+    description: >-
+      REST API for Zoho Desk providing CRUD operations across tickets, threads,
+      contacts, accounts, agents, departments, tasks, calls, events, articles,
+      and knowledge base content. Uses OAuth 2.0 with the Zoho-oauthtoken header
+      and an orgId header to scope requests to a specific organization.
+    humanURL: https://desk.zoho.com/DeskAPIDocument
+    baseURL: https://desk.zoho.com/api/v1
+    tags:
+      - Customer Support
+      - Help Desk
+      - Ticketing
+      - Knowledge Base
+    properties:
+      - type: Documentation
+        url: https://desk.zoho.com/DeskAPIDocument
+      - type: OpenAPI
+        url: https://github.com/zoho/zohodesk-oas
+      - type: Authentication
+        url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
+common:
+  - type: Website
+    url: https://www.zoho.com/desk/
+  - type: Documentation
+    url: https://desk.zoho.com/DeskAPIDocument
+  - type: Sign Up
+    url: https://www.zoho.com/desk/signup.html
+  - type: Pricing
+    url: https://www.zoho.com/desk/zoho-desk-pricing.html
+  - type: Login
+    url: https://accounts.zoho.com/signin
+  - type: Support
+    url: https://www.zoho.com/desk/support.html
+  - type: Blog
+    url: https://www.zoho.com/blog/desk/
+  - type: GitHub Organization
+    url: https://github.com/zoho
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
