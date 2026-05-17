@@ -48,7 +48,7 @@ common:
     url: https://www.zoho.com/desk/
   - type: Documentation
     url: https://desk.zoho.com/DeskAPIDocument
-  - type: Sign Up
+  - type: SignUp
     url: https://www.zoho.com/desk/signup.html
   - type: Pricing
     url: https://www.zoho.com/desk/zoho-desk-pricing.html
@@ -58,7 +58,7 @@ common:
     url: https://www.zoho.com/desk/support.html
   - type: Blog
     url: https://www.zoho.com/blog/desk/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/zoho
 maintainers:
   - FN: Kin Lane
