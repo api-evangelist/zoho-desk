@@ -44,6 +44,8 @@ apis:
       - type: Authentication
         url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/zohodesk
   - type: Website
     url: https://www.zoho.com/desk/
   - type: Documentation
