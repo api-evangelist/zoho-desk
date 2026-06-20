@@ -6,7 +6,7 @@ description: Zoho Desk is a cloud-based customer support and help desk platform 
   programmatic access to tickets, threads, contacts, agents, departments, tasks, and
   knowledge base content using OAuth 2.0 authentication scoped per organization.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Customer Support
 - Help Desk
