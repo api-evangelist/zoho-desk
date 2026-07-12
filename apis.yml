@@ -42,6 +42,10 @@ apis:
   - url: graphql/zoho-desk-graphql.md
     type: GraphQL
 common:
+- type: VulnerabilityDisclosure
+  url: security/zoho-desk-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/zoho-desk-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/showcase/zohodesk
 - type: Website
