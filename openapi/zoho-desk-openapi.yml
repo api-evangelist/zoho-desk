@@ -140,4 +140,4 @@ components:
       type: apiKey
       in: header
       name: Authorization
-      description: OAuth 2.0 access token sent as 'Authorization: Zoho-oauthtoken {access_token}'. Requests also require an orgId header.
+      description: "OAuth 2.0 access token sent as 'Authorization: Zoho-oauthtoken {access_token}'. Requests also require an orgId header."

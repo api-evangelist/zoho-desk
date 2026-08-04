@@ -2,17 +2,10 @@
   "repo": "zoho-desk",
   "feeds": [
     {
-      "source": "https://www.zoho.com/blog/desk/feed/",
-      "feed_url": "https://www.zoho.com/blog/desk/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
-    },
-    {
       "source": "https://www.zoho.com/desk/support.html",
       "error": "HTTPError"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-07-11T11:50:51Z"
+  "fetched": "2026-08-01T15:49:00Z"
 }
