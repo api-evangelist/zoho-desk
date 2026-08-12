@@ -30,28 +30,54 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-- aid: zoho-desk:zoho-desk-api
-  name: Zoho Desk REST API
-  description: REST API for Zoho Desk providing CRUD operations across tickets, threads,
-    contacts, accounts, agents, departments, tasks, calls, events, articles, and knowledge
-    base content. Uses OAuth 2.0 with the Zoho-oauthtoken header and an orgId header
-    to scope requests to a specific organization.
+- aid: zoho-desk:zoho-desk-agents-api
+  name: Zoho Desk Agents API
+  description: The Agents API from Zoho Desk — 2 operation(s) for agents.
   humanURL: https://desk.zoho.com/DeskAPIDocument
   baseURL: https://desk.zoho.com/api/v1
   tags:
-  - Customer Support
-  - Help Desk
-  - Ticketing
-  - Knowledge Base
+  - Agents
   properties:
+  - type: OpenAPI
+    url: openapi/zoho-desk-agents-api-openapi.yml
   - type: Documentation
     url: https://desk.zoho.com/DeskAPIDocument
-  - type: OpenAPI
-    url: https://github.com/zoho/zohodesk-oas
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
-  - url: graphql/zoho-desk-graphql.md
-    type: GraphQL
+  - type: GraphQL
+    url: graphql/zoho-desk-graphql.md
+- aid: zoho-desk:zoho-desk-contacts-api
+  name: Zoho Desk Contacts API
+  description: The Contacts API from Zoho Desk — 2 operation(s) for contacts.
+  humanURL: https://desk.zoho.com/DeskAPIDocument
+  baseURL: https://desk.zoho.com/api/v1
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-desk-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://desk.zoho.com/DeskAPIDocument
+  - type: Authentication
+    url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
+  - type: GraphQL
+    url: graphql/zoho-desk-graphql.md
+- aid: zoho-desk:zoho-desk-tickets-api
+  name: Zoho Desk Tickets API
+  description: The Tickets API from Zoho Desk — 2 operation(s) for tickets.
+  humanURL: https://desk.zoho.com/DeskAPIDocument
+  baseURL: https://desk.zoho.com/api/v1
+  tags:
+  - Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-desk-tickets-api-openapi.yml
+  - type: Documentation
+    url: https://desk.zoho.com/DeskAPIDocument
+  - type: Authentication
+    url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
+  - type: GraphQL
+    url: graphql/zoho-desk-graphql.md
 common:
 - type: VulnerabilityDisclosure
   url: security/zoho-desk-vulnerability-disclosure.yml
