@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zoho Desk Tickets API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tickets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://desk.zoho.com/api/v1/tickets",
+            "params": [
+              {
+                "name": "from",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List tickets"
+        },
+        {
+          "info": {
+            "name": "Create a ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://desk.zoho.com/api/v1/tickets"
+          },
+          "docs": "Create a ticket"
+        },
+        {
+          "info": {
+            "name": "Get a ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://desk.zoho.com/api/v1/tickets/:ticket_id",
+            "params": [
+              {
+                "name": "ticket_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a ticket"
+        },
+        {
+          "info": {
+            "name": "Update a ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://desk.zoho.com/api/v1/tickets/:ticket_id",
+            "params": [
+              {
+                "name": "ticket_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a ticket"
+        },
+        {
+          "info": {
+            "name": "Delete a ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://desk.zoho.com/api/v1/tickets/:ticket_id",
+            "params": [
+              {
+                "name": "ticket_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a ticket"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

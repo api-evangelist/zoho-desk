@@ -1,0 +1,68 @@
+openapi: 3.2.0
+info:
+  title: Zoho Desk Agents API
+  description: REST API for Zoho Desk, covering tickets, contacts, and agents.
+  version: v1
+servers:
+- url: https://desk.zoho.com/api/v1
+  description: Production
+security:
+- ZohoOAuth: []
+tags:
+- name: Agents
+paths:
+  /agents:
+    get:
+      summary: List agents
+      operationId: listAgents
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Agents
+    post:
+      summary: Add an agent
+      operationId: createAgent
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Agents
+  /agents/{agent_id}:
+    parameters:
+    - name: agent_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get an agent
+      operationId: getAgent
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Agents
+    put:
+      summary: Update an agent
+      operationId: updateAgent
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Agents
+    delete:
+      summary: Remove an agent
+      operationId: deleteAgent
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Agents
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'OAuth 2.0 access token sent as ''Authorization: Zoho-oauthtoken {access_token}''. Requests also require an orgId header.'

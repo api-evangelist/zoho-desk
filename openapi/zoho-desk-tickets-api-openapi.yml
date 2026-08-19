@@ -1,0 +1,79 @@
+openapi: 3.2.0
+info:
+  title: Zoho Desk Tickets API
+  description: REST API for Zoho Desk, covering tickets, contacts, and agents.
+  version: v1
+servers:
+- url: https://desk.zoho.com/api/v1
+  description: Production
+security:
+- ZohoOAuth: []
+tags:
+- name: Tickets
+paths:
+  /tickets:
+    get:
+      summary: List tickets
+      operationId: listTickets
+      parameters:
+      - name: from
+        in: query
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          default: 10
+          maximum: 50
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tickets
+    post:
+      summary: Create a ticket
+      operationId: createTicket
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Tickets
+  /tickets/{ticket_id}:
+    parameters:
+    - name: ticket_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a ticket
+      operationId: getTicket
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tickets
+    put:
+      summary: Update a ticket
+      operationId: updateTicket
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tickets
+    delete:
+      summary: Delete a ticket
+      operationId: deleteTicket
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tickets
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'OAuth 2.0 access token sent as ''Authorization: Zoho-oauthtoken {access_token}''. Requests also require an orgId header.'

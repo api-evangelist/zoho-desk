@@ -1,0 +1,23 @@
+{
+  "provider": "zoho-desk",
+  "sources": [
+    "zoho-desk-agents-api-openapi.yml",
+    "zoho-desk-contacts-api-openapi.yml",
+    "zoho-desk-tickets-api-openapi.yml"
+  ],
+  "outputs": [
+    "zoho-desk-agents-api-openapi.yml",
+    "zoho-desk-contacts-api-openapi.yml",
+    "zoho-desk-tickets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "zoho-desk-agents-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-desk-contacts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-desk-tickets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

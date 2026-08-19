@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zoho Desk Agents API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List agents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://desk.zoho.com/api/v1/agents"
+          },
+          "docs": "List agents"
+        },
+        {
+          "info": {
+            "name": "Add an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://desk.zoho.com/api/v1/agents"
+          },
+          "docs": "Add an agent"
+        },
+        {
+          "info": {
+            "name": "Get an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://desk.zoho.com/api/v1/agents/:agent_id",
+            "params": [
+              {
+                "name": "agent_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an agent"
+        },
+        {
+          "info": {
+            "name": "Update an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://desk.zoho.com/api/v1/agents/:agent_id",
+            "params": [
+              {
+                "name": "agent_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an agent"
+        },
+        {
+          "info": {
+            "name": "Remove an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://desk.zoho.com/api/v1/agents/:agent_id",
+            "params": [
+              {
+                "name": "agent_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove an agent"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
