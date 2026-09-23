@@ -1,9 +1,7 @@
 {
   "provider": "zoho-desk",
   "sources": [
-    "zoho-desk-agents-api-openapi.yml",
-    "zoho-desk-contacts-api-openapi.yml",
-    "zoho-desk-tickets-api-openapi.yml"
+    "_original/zoho-desk-openapi.yml"
   ],
   "outputs": [
     "zoho-desk-agents-api-openapi.yml",
@@ -14,7 +12,31 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "zoho-desk-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-desk-openapi.yml: tagged paths GET /tickets -> Tickets",
+    "zoho-desk-openapi.yml: tagged paths POST /tickets -> Tickets",
+    "zoho-desk-openapi.yml: tagged paths GET /tickets/{ticket_id} -> Tickets",
+    "zoho-desk-openapi.yml: tagged paths PUT /tickets/{ticket_id} -> Tickets",
+    "zoho-desk-openapi.yml: tagged paths DELETE /tickets/{ticket_id} -> Tickets",
+    "zoho-desk-openapi.yml: tagged paths GET /contacts -> Contacts",
+    "zoho-desk-openapi.yml: tagged paths POST /contacts -> Contacts",
+    "zoho-desk-openapi.yml: tagged paths GET /contacts/{contact_id} -> Contacts",
+    "zoho-desk-openapi.yml: tagged paths PUT /contacts/{contact_id} -> Contacts",
+    "zoho-desk-openapi.yml: tagged paths DELETE /contacts/{contact_id} -> Contacts",
+    "zoho-desk-openapi.yml: tagged paths GET /agents -> Agents",
+    "zoho-desk-openapi.yml: tagged paths POST /agents -> Agents",
+    "zoho-desk-openapi.yml: tagged paths GET /agents/{agent_id} -> Agents",
+    "zoho-desk-openapi.yml: tagged paths PUT /agents/{agent_id} -> Agents",
+    "zoho-desk-openapi.yml: tagged paths DELETE /agents/{agent_id} -> Agents",
+    "zoho-desk-openapi.yml: declared missing tag: Agents",
+    "zoho-desk-openapi.yml: declared missing tag: Contacts",
+    "zoho-desk-openapi.yml: declared missing tag: Tickets",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "zoho-desk-agents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-desk-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-desk-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
