@@ -31,7 +31,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zoho-desk.png
 tags:
-- Customer-Support
+- Customer Support
 - Help Desk
 - Ticketing
 - Knowledge Base
@@ -44,6 +44,7 @@ tags_raw:
 - Knowledge Base
 - Customer Service
 - Zoho
+- Customer-Support
 url: https://raw.githubusercontent.com/api-evangelist/zoho-desk/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
@@ -63,8 +64,6 @@ apis:
     url: https://desk.zoho.com/DeskAPIDocument
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
-  - type: GraphQL
-    url: graphql/zoho-desk-graphql.md
 - aid: zoho-desk:zoho-desk-contacts-api
   name: Zoho Desk Contacts API
   description: The Contacts API from Zoho Desk — 2 operation(s) for contacts.
@@ -79,8 +78,6 @@ apis:
     url: https://desk.zoho.com/DeskAPIDocument
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
-  - type: GraphQL
-    url: graphql/zoho-desk-graphql.md
 - aid: zoho-desk:zoho-desk-tickets-api
   name: Zoho Desk Tickets API
   description: The Tickets API from Zoho Desk — 2 operation(s) for tickets.
@@ -95,8 +92,6 @@ apis:
     url: https://desk.zoho.com/DeskAPIDocument
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
-  - type: GraphQL
-    url: graphql/zoho-desk-graphql.md
 common:
 - type: VulnerabilityDisclosure
   url: security/zoho-desk-vulnerability-disclosure.yml
