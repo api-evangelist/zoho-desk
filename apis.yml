@@ -93,6 +93,8 @@ apis:
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
 common:
+- type: VendorFacets
+  url: vendor-facets/zoho-desk-vendor-facets.yml
 - type: VulnerabilityDisclosure
   url: security/zoho-desk-vulnerability-disclosure.yml
 - type: DomainSecurity

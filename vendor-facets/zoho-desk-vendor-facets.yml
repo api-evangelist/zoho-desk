@@ -1,0 +1,181 @@
+# Vendor facets — Zoho Desk. Helpdesk whose Help Center combines a knowledge base, a user community
+# and ticket submission, multi-brand, mapped onto the provider's own domain. Headline: one 2-point
+# pointer check (support_channel, ~45% catalog pass rate, not saturated). An llms.txt exists on Zoho's
+# own Zoho Desk portal (help.zoho.com/portal/llms.txt, per-KB llms.txt too), but two customer portals
+# answered 403 for the same path, so customer availability is unconfirmed and the row is conditional.
+vendor: zoho-desk
+name: Zoho Desk
+website: https://www.zoho.com/desk/
+areas:
+- support
+registry_keys: []
+rubric_schema_version: 0.22.0
+generated: '2026-09-25'
+features_refreshed: '2026-09-25'
+basis: capability
+summary: >-
+  Zoho Desk gives a provider a declared support channel, 2 points in developer ergonomics, through its
+  Help Center knowledge base or community. Zoho's own Help Center serves a generated llms.txt, which would
+  be worth 4 points on a provider's domain, but the same path returned 403 on two customer portals, so
+  treat it as unconfirmed for customers until Zoho documents it. Getting-started and authentication pages
+  count only when the provider writes and declares them.
+features:
+- id: help-center
+  name: Help Center knowledge base
+  description: Knowledge-base articles with ratings, served in a Help Center alongside ticket submission.
+  source: https://www.zoho.com/desk/help-center.html
+  tier: paid
+- id: community
+  name: Help Center community
+  description: >-
+    Forum where customers ask and answer questions, suggest ideas and report problems with the provider's
+    team.
+  source: https://www.zoho.com/desk/help-center.html
+  tier: paid
+- id: domain-mapping
+  name: Help Center domain mapping and multi-brand
+  description: Maps the Help Center onto the provider's own domain, with a separate Help Center per brand.
+  source: https://www.zoho.com/desk/help-center.html
+  tier: paid
+- id: help-center-llms-txt
+  name: Generated llms.txt (observed on Zoho's own portal only)
+  description: >-
+    help.zoho.com/portal/llms.txt (a Zoho Desk Help Center, CNAME helpcenter.cs.zohohost.in) returns text/markdown
+    indexing each knowledge base with its own llms.txt; help.kerisys.com/portal/llms.txt and userhelpcenter.support/portal/llms.txt
+    returned a Zoho Desk 403 error page on 2026-09-25.
+  source: https://help.zoho.com/portal/llms.txt
+  tier: unknown
+maps:
+- feature: help-center
+  check: support_channel
+  layer: composite
+  credit: 1.0
+  provider_must: >-
+    Declare the Help Center or community in apis.yml common[] as HelpCenter, Support or Community. Binary:
+    both together still earn 2 points.
+  catalog_pass_rate: 0.45
+  facet: developer_ergonomics
+  points: 2
+  baseline_pass_rate: 0.69
+- feature: help-center-llms-txt
+  check: llms_txt_published
+  layer: composite
+  credit: 1.0
+  conditional: true
+  condition: >-
+    Only if Zoho Desk serves the generated llms.txt on the provider's portal. Observed only on Zoho's
+    own portal; two customer portals returned 403 for the same path. No Zoho documentation of the feature
+    was found.
+  provider_must: Confirm the file serves on its own mapped domain and declare it as an LLMsTxt pointer.
+  catalog_pass_rate: 0.351
+  facet: discoverability
+  points: 4
+  baseline_pass_rate: 0.65
+- feature: help-center
+  check: getting_started_present
+  layer: composite
+  conditional: true
+  condition: >-
+    Only if the provider writes a getting-started guide for its API as a knowledge-base article and declares
+    it as GettingStarted.
+  provider_must: Write the guide and declare its URL as GettingStarted.
+  catalog_pass_rate: 0.206
+  facet: developer_ergonomics
+  points: 5
+  baseline_pass_rate: 0.636
+- feature: help-center
+  check: authentication_documented
+  layer: composite
+  conditional: true
+  condition: >-
+    Only if the provider documents its API authentication in a knowledge-base article and declares it
+    as Authentication.
+  provider_must: Write the page and declare its URL as Authentication.
+  catalog_pass_rate: 0.368
+  facet: developer_ergonomics
+  points: 5
+  baseline_pass_rate: 0.94
+  saturated: true
+  saturated_note: >-
+    94% of providers with a contract, docs and a reference already earn this; the vendor cannot move it
+    for most of its buyers.
+earns_nothing:
+- feature: community
+  check: support_channel
+  why: A second route to the same binary 2-point check the knowledge base already earns.
+- feature: domain-mapping
+  why: No check reads the host of a support pointer.
+out_of_reach:
+  checks:
+  - status_page_present
+  - change_log_present
+  - contract_present
+  - api_reference_present
+  - sdk_count_1
+  note: >-
+    The Help Center produces no status page, changelog, contract, reference or SDK for the provider's
+    API.
+surface:
+  discoverability:
+    reachable: 4.0
+    total: 54
+  developer_ergonomics:
+    reachable: 12.0
+    total: 42
+  agent_readiness:
+    reachable: 0
+    total: 139
+hard_rule: >-
+  A model, not a score. Adopting this vendor changes a provider's Kin Score only when the provider publishes
+  the resulting artifacts on its own surface; nothing here writes a score, and no sponsorship or partnership
+  can.
+method: searched
+source:
+- https://help.zoho.com/portal/llms.txt
+- https://www.zoho.com/desk/help-center.html
+measured:
+  cohort:
+    method: vendors-catalog.json detections (CNAME / header / URL shape / markup), never a name match
+    detected: 0
+    in_baseline: 0
+  control:
+    basis: providers earning contract_present + documentation_present + api_reference_present, minus the
+      cohort
+    n: 5216
+  metric: >-
+    cohort_pct / control_pct = mean share of the check's points earned (derived and platform credit weighted),
+    x100
+  measured_on: '2026-09-25'
+  status: 'not measurable: 0 detected customers clear the baseline (need 20)'
+simulation:
+  simulated_on: '2026-09-25'
+  rubric: 0.23.0
+  population: providers publishing a contract (contract_present earned), replayable exactly
+  providers: 8977
+  providers_unreplayable: 987
+  providers_moved: 3995
+  conditional_rows: excluded (they depend on what the API already does)
+  composite_lift:
+    median: 0.0
+    p75: 0.9
+    p90: 1.0
+    max: 1.0
+    mean_among_movers: 0.9
+  agent_readiness_lift:
+    median: 0.0
+    p75: 0.0
+    p90: 0.0
+    max: 0.0
+    mean_among_movers: 0.0
+  facet_lift_median_among_movers:
+    developer_ergonomics: 4.8
+  composite_band_moves:
+    thin -> developing: 217
+    emerging -> thin: 66
+    developing -> strong: 34
+    strong -> exemplar: 8
+    minimal -> emerging: 1
+  agent_readiness_band_moves: {}
+  method: >-
+    each provider's own kin/checks file, the vendor's maps at their stated credit, the scorer's composite
+    formula; from -> to, nothing written
