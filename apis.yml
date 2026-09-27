@@ -84,6 +84,8 @@ apis:
   humanURL: https://desk.zoho.com/DeskAPIDocument
   baseURL: https://desk.zoho.com/api/v1
   tags:
+  - Ticketing
+  tags_raw:
   - Tickets
   properties:
   - type: OpenAPI
