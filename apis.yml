@@ -95,6 +95,9 @@ apis:
   - type: Authentication
     url: https://desk.zoho.com/DeskAPIDocument#OauthTokens
 common:
+- type: CapabilityMap
+  url: capabilities/zoho-desk-capability-edges.yml
+  name: Zoho Desk Business Capability Map
 - type: VendorFacets
   url: vendor-facets/zoho-desk-vendor-facets.yml
 - type: VulnerabilityDisclosure
