@@ -31,11 +31,10 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zoho-desk.png
 tags:
-- Customer Support
+- Customer Service
 - Help Desk
 - Ticketing
 - Knowledge Base
-- Customer Service
 - Zoho
 tags_raw:
 - Customer Support
