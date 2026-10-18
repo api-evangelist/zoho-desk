@@ -82,7 +82,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: zoho-desk-fivetran
   label: Fivetran
@@ -108,7 +108,7 @@
     - connectors/applications/zoho-desk
     vendor_link: https://www.zoho.com/desk/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: zoho-desk-google-workspace-own
   label: Google Workspace (own)
